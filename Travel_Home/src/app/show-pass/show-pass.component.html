@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <div id="pass">
+            <h2>YOUR TRAVEL PASS</h2><br>
+            <table>
+                <thead></thead>
+                <tbody>
+                <tr>
+                    <td><label>{{showUser["Name"]}} </label></td>
+                    <td> <label>{{showUser["Address"]}}</label></td>
+                </tr>
+                <tr>
+                    <td><label>{{showUser["Phone"]}}</label></td>
+                    <td><label>{{showUser["Tr_purpose"]}}</label></td>
+                </tr>
+                <tr>
+                    <td><h4>You are allowed to <b>Travel-out</b> on Dates :</h4></td>
+                    <td> <label for="date1">{{showUser["Date1"] | date:"dd-MM-yyyy"}}</label>&nbsp;&nbsp;&nbsp;
+                        AND&nbsp;&nbsp;<label for="date2">{{showUser["Date2"] | date:"dd-MM-yyyy"}}</label> </td>
+                </tr>
+            </tbody>
+            </table>
+            <a [routerLink]="['/cancel']"><button class="btn btn-primary" (click)="cancelPassData()">Cancel Pass</button></a>   
+            <!-- <a [routerLink]="['/display']"><button class="btn btn-primary">Done</button></a>    -->
+        </div>
+
+    </div>
+
+
+</div>

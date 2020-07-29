@@ -1,0 +1,31 @@
+#pass{
+    text-align: center;
+     margin:auto;
+    /*margin-right: 18%; */
+    background-color: linen;
+    width:60%;
+    height:400px;
+    border: black 2px solid;
+} 
+#pass label{
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+}  
+h2{
+    padding: 15px;
+    font-family: fantasy;
+    font-weight: bolder;
+    margin: auto;
+}
+ h2,h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: darkorange 3px dotted;
+    color: darkgreen;
+    text-align: center;
+}
+#pass table thead,tbody,tr,td{
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+}

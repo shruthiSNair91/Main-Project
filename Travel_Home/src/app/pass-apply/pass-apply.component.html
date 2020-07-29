@@ -1,0 +1,48 @@
+<div class="card">
+    <h2>Pass Application</h2>
+    <form (ngSubmit)='passDateSubmit()'>
+        <div class="card-body">
+            <div class="passApply"> 
+                <table id="tab1" class="table" style="column-rule: transparent ;">
+                    <tr>
+                        <td> <label>NAME :  </label>
+                        <input type="text" name="name" [(ngModel)]=usrData.name  placeholder="Enter Full Name"></td>
+                   
+                        <td>  <label>PLACE : </label>
+                        <input type="text" name="address" [(ngModel)]=usrData.address placeholder="Enter your place"></td>
+                    </tr>
+                    <tr>
+                        <td><label>PHONE NO. : </label>
+                        <input type="text" name="mobile" [(ngModel)]=usrData.phone placeholder="Enter MOBILE number">
+                   
+                        <td><label>TRAVELLING PURPOSE : </label>
+                            <select name="mydroplist" [(ngModel)]="usrData.trPurpose" (change)="selected()">
+                                <option *ngFor="let item of data" [ng-value]="item">{{item.name}}</option>
+                              </select>
+                        <!-- <input type="text" name="purpose" [(ngModel)]=usrData.trPurpose placeholder="Enter travelling Purpose"></td> -->
+                    </tr>
+                    <tr>
+                        <td><label>APPLYING DATE : {{currentDate | date:'dd-MM-yyyy'}}</label></td>
+                   </tr>
+                   <h4>Availability of Pass for Next 7 Days : </h4>
+                   <table id="tab2" style="text-align: center; margin-left: 50px;">
+                            <tr *ngFor='let pass of passObj; let index = index;'>
+                                <!-- <td>{{currentDate | date:'dd-MM-yyyy' }}</td> -->
+                                <td >{{pass.pass_date | date:'dd-MM-yyyy'}}</td> 
+                                <td><span *ngIf=pass.isAvailable>Available</span>
+                                <span *ngIf=!pass.isAvailable>Not Available</span></td>
+                                <td><input [disabled]=!pass.isAvailable type="checkbox" [(ngModel)]="checkStatus[index]" name="check--{{index}}"  style="width: 25px; height: 25px;"></td>
+                            </tr>
+                        </table>
+                   <tr>
+                       <td></td>
+                       <td><input type="submit" value="Apply" style="padding: 10px; background-color:dodgerblue;"></td>
+                   </tr>
+                </table>
+
+            </div>
+           
+        </div>
+
+    </form>
+</div>
