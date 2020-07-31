@@ -5,10 +5,10 @@
         <h2>Login</h2>
  
       </header>
-      <form>
+      <form (ngSubmit)='loginData()'>
 
-        <input type="text" class="login-input"  name="phone" placeholder="Mobile No." required autofocus>
-        <input type="password" class="login-input" name="pwd" placeholder="Password" required>
+        <input type="text" class="login-input"  name="phone" [(ngModel)]=loginObj.phone placeholder="Mobile No." required autofocus>
+        <input type="password" class="login-input" name="pwd" [(ngModel)]=loginObj.pwd placeholder="Password" required>
         <div class="submit-container">
           <button type="submit" class="btn login-button" >SIGN IN</button>
         </div>

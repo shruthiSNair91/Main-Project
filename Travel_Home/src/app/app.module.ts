@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PassApplyComponent } from './pass-apply/pass-apply.component';
 import { PassCancelComponent } from './pass-cancel/pass-cancel.component';
-import { PassChangeComponent } from './pass-change/pass-change.component';
 import { from } from 'rxjs';
 import { ShowPassComponent } from './show-pass/show-pass.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { MyPassComponent } from './my-pass/my-pass.component';
 
 
 @NgModule({
@@ -21,10 +22,11 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     PassApplyComponent,
     PassCancelComponent,
-    PassChangeComponent,
     ShowPassComponent,
     SignupComponent,
     LoginComponent,
+    FooterComponent,
+    MyPassComponent,
      ],
   imports: [
     BrowserModule,

@@ -11,16 +11,35 @@ import { from } from 'rxjs';
 export class SignupComponent implements OnInit {
 
   userSignup=<any>{}
-
-  constructor(private pServ:PassConnectService) { }
+  flag = true;
+  constructor(private pServ:PassConnectService, private route:Router)
+   {  }
 
   ngOnInit(): void {
   }
-
+  
   AddsignupUser()
   {
-    alert('functn called');
-    console.log(this.userSignup);
+    alert('signup function called');
+    var regEx = new RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
+    console.log(this.userSignup.phone);
     
+    if (regEx.test(this.userSignup.phone))
+     {
+       alert("true..");
+          console.log(this.userSignup);
+          if(this.userSignup.pwd==this.userSignup.cnfpwd)
+          {
+              this.pServ.signupUser(this.userSignup)
+              this.route.navigate(['/login']);
+          }
+          else{
+            alert('Password doesnot matches');
+              }
+      }
+      else{
+            this.flag=false;
+      }
+      
+    }
   }
-}

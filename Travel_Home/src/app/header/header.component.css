@@ -3,13 +3,14 @@ header{
 }
 .head-select{
             text-align: center;
-            margin-left:auto;
+            margin-left:20%;
             height: 50px;
         }
   .head-select a{
+      font-size: 18px;
     color:blue;
     text-decoration: none;
-    margin-left: 10% ;
+    margin-left: auto;
     padding: 50px;
     text-align: right;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

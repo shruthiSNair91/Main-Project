@@ -3,7 +3,6 @@ mongoose.connect('mongodb://localhost:27017/TravelPassDb');
 
 const Schema=mongoose.Schema;
 var signupSchema = new Schema ({
-    email : String,
     phone : Number,
     pswd : String
 });

@@ -36,4 +36,17 @@ cancelPass(id)
   
 }
 
+signupUser(user)
+{
+  return this.http.post('http://localhost:5200/signup',{'User':user})
+  .subscribe((data)=>console.log(data));
+}
+
+loginUser(loguser)
+{
+  alert('service');
+  return this.http.post('http://localhost:5200/login',{'loguser':loguser})
+  
+}
+
 }
